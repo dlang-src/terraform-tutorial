@@ -1,8 +1,8 @@
 resource "aws_instance" "opscenter_production" {
     provider = "aws.virginia"
     count = "1"
-    instance_type = "${var.ops_instance_type"
-    ami = "${var.hurley_infrastructure_amis.virginia}"
+    instance_type = "${var.ops_instance_type}"
+    ami = "${var.baseami.virginia}"
     iam_instance_profile = "${aws_iam_instance_profile.opscenter.name}"
     subnet_id = "${lookup(var.prod_east_subnet_mapping, count.index)}"
     vpc_security_group_ids = [
