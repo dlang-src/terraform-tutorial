@@ -20,7 +20,6 @@ variable "vpc_map" {
     }
 }
 
-# Subnets http://wiki.hbo.com/display/HUR/Infrastructure+Overview
 variable "nonprod_subnet_mapping" {
     description = "AWS subnets mapping in us-west-2 for nonprod"
     default = {
